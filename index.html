@@ -1,0 +1,65 @@
+import React, { useState } from 'react';
+import './styles.css'; // Import your CSS file
+
+function App() {
+    const [showProjects, setShowProjects] = useState(false);
+
+    // Function to toggle display of projects
+    const toggleProjects = () => {
+        setShowProjects(!showProjects);
+    };
+
+    return (
+        <div>
+            <header>
+                <h1>Cybersecurity Analyst Portfolio</h1>
+                <nav>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects" onClick={toggleProjects}>Projects</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </header>
+            <div className="container">
+                <section id="about">
+                    <h2>About Me</h2>
+                    <p>Your introduction and overview of your skills and experience.</p>
+                </section>
+                <section id="experience">
+                    <h2>Experience</h2>
+                    <p>Details of your relevant work experience.</p>
+                </section>
+                <section id="projects">
+                    <h2>Projects</h2>
+                    <div className={`projects-container ${showProjects ? 'show' : ''}`}>
+                        <div className="project">
+                            <h3>Project 1</h3>
+                            <p>Description of Project 1.</p>
+                        </div>
+                        <div className="project">
+                            <h3>Project 2</h3>
+                            <p>Description of Project 2.</p>
+                        </div>
+                        {/* Add more projects as needed */}
+                    </div>
+                </section>
+                <section id="skills">
+                    <h2>Skills</h2>
+                    <p>Your skills and expertise relevant to cybersecurity.</p>
+                </section>
+                <section id="contact">
+                    <h2>Contact Me</h2>
+                    <div className="contact-links">
+                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
+                        <a href="mailto:youremail@example.com">Email</a>
+                    </div>
+                    <p>Your contact information.</p>
+                </section>
+            </div>
+        </div>
+    );
+}
+
+export default App;
