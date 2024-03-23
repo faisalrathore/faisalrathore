@@ -97,6 +97,115 @@
             }
         }
     </style>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333; /* Default text color */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff; /* Navigation link color */
+            margin: 0 10px;
+            transition: color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            color: #fff;
+            background-color: #ffa500; /* Navigation link background color on hover */
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+        .project {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            transition: transform 0.3s ease;
+        }
+        .project:last-child {
+            margin-bottom: 0; /* Remove margin bottom for the last project */
+        }
+        .project h3 {
+            margin-top: 0;
+            color: #333; /* Project title color */
+        }
+        .project p {
+            margin-bottom: 10px;
+            color: #555; /* Project description color */
+        }
+        .project:hover {
+            transform: translateY(-5px); /* Move up on hover */
+        }
+        .skills-column {
+            width: 30%; /* Adjust width as needed */
+            padding-left: 20px; /* Add left padding for space */
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #f5f5f5; /* Highlight on hover */
+        }
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+
+        /* Section-specific styles */
+        section {
+            background-color: #f9f9f9; /* Section background color */
+            padding: 20px; /* Add padding for spacing */
+            border-radius: 8px; /* Add border radius for rounded corners */
+            margin-bottom: 20px; /* Add margin to separate sections */
+        }
+
+        section h2 {
+            color: #005aff; /* Section heading color */
+        }
+    </style>
+</head>
+<body>
+
 </head>
 <body>
     <header>
@@ -112,13 +221,13 @@
     </header>
     <div class="container">
         <section id="about">
-            <h2>Hi, I'm Faisal</h2>
+            <h3>Hi, I'm Faisal</h3>
             <p>With over 4 years in cybersecurity, I have expertise in web penetration testing using tools like Burp Suite, OWASP ZAP and Nmap, specializing in identifying vulnerabilities like SQL injections, XSS, IDORS, Business Logic, RCEs etc.</p> 
             <p>My Cloud Security, Azure & AWS expertise includes IAM, VPC, S3, and CloudTrail. Proficient in network penetration testing with tools like Metasploit, Nmap, Nessus etc. I ensure proactive monitoring and response to security events, particularly with Splunk.</p>
             <p>Honestly, my journey into cybersecurity stems from an innate curiosity about computers and the internet since childhood, however I was unable to take a formal academic pursuit in computer science that time.</p>
         </section>
         <section id="experience">
-    <h2>Experience</h2>
+    <h2 style="color: #005aff;">Experience</h2>
     <table>
         <thead>
             <tr>
@@ -145,9 +254,9 @@
         </tbody>
     </table>
 </section>
-
+<tr>
         <section id="projects">
-            <h2>Projects</h2>
+            <h2 style="color: #005aff;">Projects</h2>
             <table>
                 <tr>
                     <th>Project Name</th>
@@ -166,8 +275,11 @@
                 <!-- Add more projects as needed -->
             </table>
         </section>
+    </tr>
+
+    <tr>
         <section id="certifications">
-            <h2>Certifications and Licenses</h2>
+            <h2 style="color: #005aff;">Certifications and Licenses</h2>
             <table>
                 <tr>
                     <th>Certification/License</th>
@@ -190,10 +302,10 @@
                 </tr>
             </table>
         </section>
-
+</tr>
         <section id="skills">
     <section id="skills">
-    <h2>Skills</h2>
+    <h2 style="color: #005aff;">Skills</h2>
     <table>
         <tr>
             <th>Skill</th>
@@ -213,7 +325,7 @@
 
 
         <section id="contact">
-    <h2>Contact Me</h2>
+    <h2 style="color: #005aff;">Contact Me</h2>
     <div class="contact-links">
         <a href="https://www.linkedin.com/in/faisalrathore" target="_blank">
             <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
