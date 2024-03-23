@@ -1,65 +1,141 @@
-import React, { useState } from 'react';
-import './styles.css'; // Import your CSS file
-
-function App() {
-    const [showProjects, setShowProjects] = useState(false);
-
-    // Function to toggle display of projects
-    const toggleProjects = () => {
-        setShowProjects(!showProjects);
-    };
-
-    return (
-        <div>
-            <header>
-                <h1>Cybersecurity Analyst Portfolio</h1>
-                <nav>
-                    <a href="#about">About</a>
-                    <a href="#experience">Experience</a>
-                    <a href="#projects" onClick={toggleProjects}>Projects</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </header>
-            <div className="container">
-                <section id="about">
-                    <h2>About Me</h2>
-                    <p>Your introduction and overview of your skills and experience.</p>
-                </section>
-                <section id="experience">
-                    <h2>Experience</h2>
-                    <p>Details of your relevant work experience.</p>
-                </section>
-                <section id="projects">
-                    <h2>Projects</h2>
-                    <div className={`projects-container ${showProjects ? 'show' : ''}`}>
-                        <div className="project">
-                            <h3>Project 1</h3>
-                            <p>Description of Project 1.</p>
-                        </div>
-                        <div className="project">
-                            <h3>Project 2</h3>
-                            <p>Description of Project 2.</p>
-                        </div>
-                        {/* Add more projects as needed */}
-                    </div>
-                </section>
-                <section id="skills">
-                    <h2>Skills</h2>
-                    <p>Your skills and expertise relevant to cybersecurity.</p>
-                </section>
-                <section id="contact">
-                    <h2>Contact Me</h2>
-                    <div className="contact-links">
-                        <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">Twitter</a>
-                        <a href="mailto:youremail@example.com">Email</a>
-                    </div>
-                    <p>Your contact information.</p>
-                </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Analyst Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333; /* Default text color */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            margin-top: 0;
+        }
+        nav {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff; /* Navigation link color */
+            margin: 0 10px;
+            transition: color 0.3s ease;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            color: #fff;
+            background-color: #ffa500; /* Navigation link background color on hover */
+            transform: scale(1.05); /* Scale effect on hover */
+        }
+        .project {
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 20px;
+        }
+        .project:last-child {
+            border-bottom: none;
+        }
+        .project h3 {
+            margin-top: 0;
+            color: #333; /* Project title color */
+        }
+        .project p {
+            margin-bottom: 10px;
+            color: #555; /* Project description color */
+        }
+        .contact-links {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .contact-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .contact-links a:hover {
+            color: #ffa500; /* Contact link color on hover */
+        }
+        @media (max-width: 600px) {
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cybersecurity Analyst Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Your introduction and overview of your skills and experience.</p>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <p>Details of your relevant work experience.</p>
+        </section>
+        <section id="projects">
+            <h2>Projects</h2>
+            <table>
+                <tr>
+                    <th>Project Name</th>
+                    <th>Link</th>
+                </tr>
+                <tr>
+                    <td>Project 1</td>
+                    <td><a href="https://example.com/project1" target="_blank">Project 1 Link</a></td>
+                </tr>
+                <tr>
+                    <td>Project 2</td>
+                    <td><a href="https://example.com/project2" target="_blank">Project 2 Link</a></td>
+                </tr>
+                <!-- Add more projects as needed -->
+            </table>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <p>Your skills and expertise relevant to cybersecurity.</p>
+        </section>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <div class="contact-links">
+                <a href="https://www.linkedin.com/" target="_blank">LinkedIn</a>
+                <a href="https://twitter.com/" target="_blank">Twitter</a>
+                <a href="mailto:youremail@example.com">Email</a>
             </div>
-        </div>
-    );
-}
-
-export default App;
+            <p>Your contact information.</p>
+        </section>
+    </div>
+</body>
+</html>
