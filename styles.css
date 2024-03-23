@@ -1,0 +1,8 @@
+.projects-container {
+    display: none;
+    transition: display 0.5s ease-in-out;
+}
+
+.projects-container.show {
+    display: block;
+}
